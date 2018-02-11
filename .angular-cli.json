@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/bootstrap/scss/bootstrap.scss"
+        "../node_modules/bootstrap/scss/bootstrap.scss",
+        "./assets/sass/material-dashboard.scss",
+        "./assets/css/demo.css"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",

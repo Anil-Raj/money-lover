@@ -56,7 +56,6 @@ import { ComponentsModule } from './components/components.module';
     AppRoutingModule,
 
   ],
-  providers: [Location],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
