@@ -12,6 +12,8 @@ export class NavbarComponent {
 
   constructor( public nav: SidebarService ) {}
     navOpen() {
+      console.log('togglecalled');
+
       this.nav.toggle();
     }
 
