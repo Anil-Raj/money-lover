@@ -26,6 +26,8 @@ import { AddCategoryComponent } from './add-category/add-category.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
+import { TransactionsService } from './transactions/transactions.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -51,11 +53,13 @@ import { ComponentsModule } from './components/components.module';
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [TransactionsService]
 })
 export class AppModule { }

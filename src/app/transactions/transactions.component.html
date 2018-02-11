@@ -1,3 +1,8 @@
-<p>
-  transactions works!
-</p>
+
+<ul class="heroes">
+  <li *ngFor="let hero of transactions">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.description}}
+    </a>
+  </li>
+</ul>
