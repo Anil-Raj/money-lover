@@ -28,6 +28,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
 import { TransactionsService } from './transactions/transactions.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TransactionDetailComponent } from './transaction-detail/transaction-detail.component';
+import { GroupByPipe } from './group-by.pipe';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { HttpClientModule } from '@angular/common/http';
     AddTransactionComponent,
     AddDebtComponent,
     AddCategoryComponent,
-    WalletComponent
+    WalletComponent,
+    TransactionDetailComponent,
+    GroupByPipe
   ],
   imports: [
     BrowserModule,

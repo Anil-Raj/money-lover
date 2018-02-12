@@ -9,14 +9,26 @@ import { Transaction } from '../Models/Transaction';
 })
 export class TransactionsComponent implements OnInit {
 
+  categories: any[];
   transactions: Transaction[];
-  constructor(private service: TransactionsService) { }
-
-  ngOnInit() {
-    this.service.getTransactions().subscribe(tr => {
-      console.log(tr);
-      this.transactions = tr;
-    });
+  groupByFilter = 'categoryId';
+  constructor(private service: TransactionsService) {
+    this.service.getTransactions().subscribe(tr => this.transactions = tr);
+    this.service.getCategories().subscribe(c => this.categories = c);
   }
 
+  ngOnInit() {
+
+  }
+  getHeader(key, trs: Transaction[]) {
+    if (this.groupByFilter === 'time') {
+      return trs[0].time;
+    }
+    if (this.groupByFilter === 'categoryId') {
+      console.log(key);
+
+      // return this.service.getCategoryById(key).subscribe(c => c.name);
+      return 'CategoryName';
+    }
+  }
 }

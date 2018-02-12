@@ -18,15 +18,14 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
+      "serviceWorker": true,
       "styles": [
-        "../node_modules/bootstrap/scss/bootstrap.scss",
-        "./assets/sass/material-dashboard.scss",
-        "./assets/css/demo.css"
+        "../node_modules/bootstrap/scss/bootstrap.scss"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js",
-        "../node_modules/popper/dist/popper.js"
+        "../node_modules/popper.js/dist/popper.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -61,6 +60,7 @@
   },
   "defaults": {
     "styleExt": "scss",
-    "component": {}
+    "component": {
+    }
   }
 }
